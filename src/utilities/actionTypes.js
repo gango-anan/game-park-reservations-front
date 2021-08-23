@@ -1,0 +1,8 @@
+export const ADD_ACTIVITY = 'ADD_ACTIVITY';
+export const ADD_RESERVATION = 'ADD_RESERVATION';
+export const FETCH_ACTIVITIES = 'FETCH_ACTIVITIES';
+export const FETCH_RESERVATIONS = 'FETCH_RESERVATIONS';
+export const SIGNUP_USER = 'SIGNUP_USER';
+export const DELETE_USER = 'DELETE_USER';
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
