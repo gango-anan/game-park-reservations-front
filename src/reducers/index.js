@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import activitiesReducer from './activities';
-import usersReducer from './users';
+import userRegistrationReducer from './users/userRegistrationReducer';
+import userSignInReducer from './users/userSignInReducer';
 
 const rootReducer = combineReducers({
   allActivities: activitiesReducer,
-  userRegistrationData: usersReducer,
+  userRegistrationData: userRegistrationReducer,
+  userCredentials: userSignInReducer,
 });
 
 export default rootReducer;
