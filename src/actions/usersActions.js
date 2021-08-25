@@ -3,9 +3,12 @@ import {
   SIGNUP_USER,
   SIGNUP_SUCCESSFUL,
   SIGNUP_UNSUCCESSFUL,
+  LOGIN_USER,
+  LOGIN_SUCCESSFUL,
+  LOGIN_UNSUCCESSFUL,
 } from '../utilities/actionTypes';
 
-const signUpUser = (userSignUpData) => (dispatch) => {
+export const signUpUser = (userSignUpData) => (dispatch) => {
   dispatch({ type: SIGNUP_USER, payload: {} });
   axios
     .post('http://localhost:3000/api/v1/register', userSignUpData)
@@ -16,6 +19,7 @@ const signUpUser = (userSignUpData) => (dispatch) => {
       });
     })
     .catch((error) => {
+      console.log('Error executed');
       dispatch({
         type: SIGNUP_UNSUCCESSFUL,
         payload: error.response.data.join(),
@@ -23,4 +27,23 @@ const signUpUser = (userSignUpData) => (dispatch) => {
     });
 };
 
-export default signUpUser;
+export const signInUser = (userSignInData) => (dispatch) => {
+  console.log(userSignInData);
+  dispatch({ type: LOGIN_USER, payload: {} });
+  axios
+    .post('http://localhost:3000/api/v1/sign_in', userSignInData)
+    .then((response) => {
+      dispatch({
+        type: LOGIN_SUCCESSFUL,
+        payload: response.data,
+      });
+    })
+    .catch((error) => {
+      if (error.response) {
+        dispatch({
+          type: LOGIN_UNSUCCESSFUL,
+          payload: error.response,
+        });
+      }
+    });
+};
