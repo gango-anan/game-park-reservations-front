@@ -1,25 +1,19 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const RegistrationForm = (props) => {
-  const {
-    userName,
-    userEmail,
-    userPassWord,
-    userPassWordConfirmation,
-    handleSubmit,
-  } = props;
-
+const RegistrationForm = ({
+  userName,
+  userEmail,
+  userPassWord,
+  userPassWordConfirmation,
+  handleSubmit,
+}) => {
   useEffect(() => {
     userName.current.focus();
   }, []);
 
   return (
     <section>
-      <div>
-        <h2>Sign in</h2>
-        <p>to continue to Game Reservations</p>
-      </div>
       <>
         <form onSubmit={handleSubmit}>
           <div>
