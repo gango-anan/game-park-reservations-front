@@ -1,15 +1,15 @@
 import React from 'react';
 import RegistrationsContainer from '../containers/RegistrationsContainer';
+import SignInContainer from '../containers/SignInContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Game Safari Reservations</h1>
-      <main>
-        <RegistrationsContainer />
-      </main>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <h1>Game Safari Reservations</h1>
+    <main>
+      <RegistrationsContainer />
+      <SignInContainer />
+    </main>
+  </div>
+);
 
 export default App;
