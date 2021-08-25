@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import signUpUser from '../actions/usersActions';
+import { signUpUser } from '../actions/usersActions';
 import LoadingUserData from '../components/LoadingUserData';
 import RegistrationForm from '../components/RegistrationForm';
 
-const RegistrationsContainer = (props) => {
-  const { userData, registerUser } = props;
+const RegistrationsContainer = ({ userData, registerUser }) => {
   const userName = useRef(null);
   const userEmail = useRef(null);
   const userPassWord = useRef(null);
@@ -37,6 +36,10 @@ const RegistrationsContainer = (props) => {
 
   return (
     <div>
+      <div>
+        <h2>Sign Up</h2>
+        <p>to continue to Game Reservations</p>
+      </div>
       <RegistrationForm
         userName={userName}
         userEmail={userEmail}
