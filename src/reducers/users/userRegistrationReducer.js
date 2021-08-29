@@ -2,7 +2,7 @@ import {
   SIGNUP_USER,
   SIGNUP_SUCCESSFUL,
   SIGNUP_UNSUCCESSFUL,
-} from '../../utilities/actionTypes';
+} from '../../shared/actionTypes';
 
 const initialState = {
   user: {},

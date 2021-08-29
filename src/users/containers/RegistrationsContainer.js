@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { signUpUser } from '../actions/usersActions';
-import LoadingUserData from '../components/LoadingUserData';
+import { signUpUser } from '../../actions/usersActions';
+import LoadingUserData from '../../shared/components/LoadingUserData';
 import RegistrationForm from '../components/RegistrationForm';
 
 const RegistrationsContainer = ({ userData, registerUser }) => {

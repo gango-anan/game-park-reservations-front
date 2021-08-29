@@ -6,7 +6,7 @@ import {
   LOGIN_USER,
   LOGIN_SUCCESSFUL,
   LOGIN_UNSUCCESSFUL,
-} from '../utilities/actionTypes';
+} from '../shared/actionTypes';
 
 export const signUpUser = (userSignUpData) => (dispatch) => {
   dispatch({ type: SIGNUP_USER, payload: {} });
