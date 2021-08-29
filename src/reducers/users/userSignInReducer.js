@@ -2,7 +2,7 @@ import {
   LOGIN_USER,
   LOGIN_SUCCESSFUL,
   LOGIN_UNSUCCESSFUL,
-} from '../../utilities/actionTypes';
+} from '../../shared/actionTypes';
 
 const initialState = {
   user: {},

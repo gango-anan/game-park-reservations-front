@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SignInForm from '../components/SignInForm';
-import { signInUser } from '../actions/usersActions';
+import { signInUser } from '../../actions/usersActions';
 
 const SignInContainer = ({ logInUser }) => {
   const userEmail = useRef(null);

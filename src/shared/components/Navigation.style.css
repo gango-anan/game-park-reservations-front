@@ -1,0 +1,12 @@
+.nav-links {
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--dark-color);
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import { FETCH_ACTIVITIES } from '../utilities/actionTypes';
+import { FETCH_ACTIVITIES } from '../../shared/actionTypes';
 
 const initialState = { activities: [] };
 
