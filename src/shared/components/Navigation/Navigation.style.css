@@ -10,3 +10,7 @@
   color: var(--light-color);
   font-weight: bold;
 }
+
+.align-links {
+  margin-left: auto;
+}

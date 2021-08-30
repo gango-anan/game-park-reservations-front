@@ -1,0 +1,56 @@
+.home-bg {
+  height: 75vh;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 30vh;
+  background: linear-gradient(
+      to right,
+      rgba(39, 39, 39, 0.6),
+      rgba(39, 39, 39, 0.3)
+    ),
+    url('../../assets/images/cover-pic7.jpg') center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_title {
+  color: var(--light-color);
+  font-size: 5vw;
+  padding-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  border-bottom: 1.5px solid var(--light-color);
+  width: 90%;
+}
+
+.home_slogan {
+  color: var(--light-color);
+  font-size: 2vw;
+}
+
+.home-page-details {
+  margin: 10vh;
+}
+
+.activity-details {
+  width: 40vw;
+}
+
+.home-activity-title {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.details-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--grayish-color);
+}
+
+.btn-more-details {
+  padding: 1rem 1.5rem;
+  border: 0;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: var(--light-color);
+}
