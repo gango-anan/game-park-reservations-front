@@ -22,9 +22,6 @@ const SignInContainer = ({ logInUser }) => {
   };
   return (
     <>
-      <div>
-        <h3>Sign In</h3>
-      </div>
       <SignInForm
         userEmail={userEmail}
         userPassWord={userPassWord}

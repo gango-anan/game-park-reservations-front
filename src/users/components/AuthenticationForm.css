@@ -20,13 +20,12 @@
 }
 
 .form-container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   width: 40%;
   margin: auto;
   padding: 1rem 2rem;
-  height: 85%;
 }
 
 .form-title {
@@ -58,7 +57,7 @@
   display: block;
   width: 100%;
   padding: 0.5vw;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .show-password-checkbox {
