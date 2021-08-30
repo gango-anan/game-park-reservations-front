@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './SignInForm.css';
 import { Link } from 'react-router-dom';
+import './AuthenticationForm.css';
 
 const SignInForm = ({ userEmail, userPassWord, handleSubmit }) => {
   useEffect(() => {
@@ -9,10 +9,10 @@ const SignInForm = ({ userEmail, userPassWord, handleSubmit }) => {
   }, []);
 
   return (
-    <div className="sign-in-container">
+    <div className="auth-form-wrapper">
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <div className="sign-in-title">
+          <div className="form-title">
             <h2>Sign in</h2>
             <p>to continue to Game Safaris Reservations</p>
           </div>
@@ -48,7 +48,7 @@ const SignInForm = ({ userEmail, userPassWord, handleSubmit }) => {
             <label htmlFor="show-password">Show passord</label>
           </div>
           <div>
-            <button type="submit" className="sign-in-btn">
+            <button type="submit" className="auth-form-btn">
               Sign in
             </button>
           </div>

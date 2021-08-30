@@ -1,4 +1,4 @@
-.sign-in-container {
+.auth-form-wrapper {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -25,12 +25,20 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   width: 40%;
   margin: auto;
-  padding: 2rem 2rem;
-  height: 80%;
+  padding: 1rem 2rem;
+  height: 85%;
 }
 
-.sign-in-title {
+.form-title {
   text-align: center;
+}
+
+.form-title h2 {
+  font-size: 3vw;
+}
+
+.form-title p {
+  font-size: 1.5vw;
 }
 
 .form-controller {
@@ -40,6 +48,7 @@
 .form-controller label {
   display: block;
   margin-bottom: 0.2rem;
+  font-size: 1.5vw;
 }
 
 .form-controller input {
@@ -48,8 +57,8 @@
   border-radius: 4px;
   display: block;
   width: 100%;
-  padding: 0.5rem;
-  font-size: 14px;
+  padding: 0.5vw;
+  font-size: 1.5vw;
 }
 
 .show-password-checkbox {
@@ -57,7 +66,7 @@
   cursor: pointer;
 }
 
-.sign-in-btn {
+.auth-form-btn {
   cursor: pointer;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
@@ -80,4 +89,5 @@
 
 .back-home-link {
   text-align: center;
+  font-size: 1.5vw;
 }
