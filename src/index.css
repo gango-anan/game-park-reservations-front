@@ -10,6 +10,7 @@
   --primary-color: #97bf2a;
   --dark-color: #000;
   --light-color: #fff;
+  --grayish-color: rgb(182, 177, 177);
 }
 
 body {
@@ -23,6 +24,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--light-color);
 }
 
 header {

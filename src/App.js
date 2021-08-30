@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter, Route, Redirect, Switch,
 } from 'react-router-dom';
-import NavigationBar from './shared/components/NavigationBar';
+import NavigationBar from './shared/components/Navigation/NavigationBar';
 import Home from './home/components/Home';
 import SignInContainer from './users/containers/SignInContainer';
 import RegistrationsContainer from './users/containers/RegistrationsContainer';
