@@ -1,0 +1,83 @@
+.sign-in-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to right,
+      rgba(39, 39, 39, 0.3),
+      rgba(39, 39, 39, 0.3)
+    ),
+    url('../../assets/images/cover-pic4.jpg') center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color);
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  width: 40%;
+  margin: auto;
+  padding: 2rem 2rem;
+  height: 80%;
+}
+
+.sign-in-title {
+  text-align: center;
+}
+
+.form-controller {
+  margin-bottom: 0.8rem;
+}
+
+.form-controller label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.form-controller input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 14px;
+}
+
+.show-password-checkbox {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--light-color);
+  display: block;
+  font-size: 1.5vw;
+  padding: 0.5rem 0.8rem;
+  width: 10vw;
+  margin-left: auto;
+}
+
+.signup-link {
+  padding-top: 1rem;
+}
+
+.unregistered-user-link {
+  color: var(--grayish-color);
+}
+
+.back-home-link {
+  text-align: center;
+}
