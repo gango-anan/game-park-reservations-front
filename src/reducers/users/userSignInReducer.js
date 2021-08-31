@@ -8,15 +8,15 @@ const initialState = {
   user: {},
   username: localStorage.getItem('loggedInUserName'),
   loggedIn: JSON.parse(localStorage.getItem('loggedInStatus')),
-  registrationError: '',
+  signInError: '',
   authToken: localStorage.getItem('loggedInUserAuthToken'),
-  waitingForRegData: false,
+  waitingForData: false,
 };
 
 const userSignInReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_USER:
-      return { ...state, waitingForRegData: true };
+      return { ...state, waitingForData: true };
     case LOGIN_SUCCESSFUL:
       return {
         ...state,
@@ -26,20 +26,21 @@ const userSignInReducer = (state = initialState, action) => {
           action.payload.user.username,
         ),
         loggedIn: localStorage.setItem('loggedInStatus', JSON.stringify(true)),
-        registrationError: '',
+        signInError: '',
         authToken: localStorage.setItem(
           'loggedInUserAuthToken',
           action.payload.user.token,
         ),
-        waitingForRegData: false,
+        waitingForData: false,
       };
     case LOGIN_UNSUCCESSFUL:
       return {
         ...state,
         loggedIn: localStorage.setItem('loggedInStatus', JSON.stringify(false)),
-        registrationError: action.payload,
+        signInError: action.payload,
         username: localStorage.setItem('loggedInUserName', ''),
         authToken: localStorage.setItem('loggedInUserAuthToken', ''),
+        waitingForData: false,
       };
     default:
       return state;
