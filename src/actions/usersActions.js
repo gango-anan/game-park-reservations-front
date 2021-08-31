@@ -40,7 +40,7 @@ export const signInUser = (userSignInData) => (dispatch) => {
       if (error.response) {
         dispatch({
           type: LOGIN_UNSUCCESSFUL,
-          payload: error.response,
+          payload: error.response.data,
         });
       }
     });
