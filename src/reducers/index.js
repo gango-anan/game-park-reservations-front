@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import activitiesReducer from './activities/activities';
+import activitiesReducer from './activities/activitiesReducers';
 import userRegistrationReducer from './users/userRegistrationReducer';
 import userSignInReducer from './users/userSignInReducer';
 
