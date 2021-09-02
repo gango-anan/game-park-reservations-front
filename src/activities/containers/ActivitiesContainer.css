@@ -1,0 +1,15 @@
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.activities-grid > * {
+  flex: 0 1 30%;
+}
+
+@media (max-width: 768px) {
+  .activities-grid {
+    flex-direction: column;
+  }
+}
