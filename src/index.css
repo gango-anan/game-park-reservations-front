@@ -24,7 +24,17 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--grayish-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+button a {
   color: var(--light-color);
+  font-size: 1.4vw;
 }
 
 header {

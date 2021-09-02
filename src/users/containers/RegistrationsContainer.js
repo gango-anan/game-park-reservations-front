@@ -36,10 +36,6 @@ const RegistrationsContainer = ({ userData, registerUser }) => {
 
   return (
     <div>
-      <div>
-        <h2>Sign Up</h2>
-        <p>to continue to Game Reservations</p>
-      </div>
       <RegistrationForm
         userName={userName}
         userEmail={userEmail}
