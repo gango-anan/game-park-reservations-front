@@ -47,7 +47,7 @@ const SignInContainer = ({ logInUser, userData }) => {
       </>
     );
   }
-  return <Redirect to="/" />;
+  return <Redirect to="/activities" />;
 };
 
 SignInContainer.propTypes = {
