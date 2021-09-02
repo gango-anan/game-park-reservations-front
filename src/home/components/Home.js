@@ -54,7 +54,7 @@ const Home = () => {
         {activities.map((activity) => {
           const { attributes } = activity;
           return (
-            <Carousel.Item key={attributes.key}>
+            <Carousel.Item key={`game-${attributes.id}`}>
               <img
                 className="d-block w-100"
                 src={attributes.image_url}
