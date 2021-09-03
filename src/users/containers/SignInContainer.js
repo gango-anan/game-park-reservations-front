@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import SignInForm from '../components/SignInForm';
 import { signInUser } from '../../actions/usersActions';
 import LoadingUserData from '../../shared/components/LoadingUserData';
 
-const SignInContainer = ({ logInUser, userData }) => {
+const SignInContainer = () => {
   const userEmail = useRef(null);
   const userPassWord = useRef(null);
+  const dispatch = useDispatch();
+  const userData = useSelector((state) => state.userCredentials);
+  const { authToken, signInError, userDataLoading } = userData;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,10 +22,10 @@ const SignInContainer = ({ logInUser, userData }) => {
       },
     };
 
-    logInUser(data);
+    dispatch(signInUser(data));
   };
 
-  if (userData.waitingForData) {
+  if (userDataLoading) {
     return (
       <div>
         <LoadingUserData />
@@ -31,15 +33,11 @@ const SignInContainer = ({ logInUser, userData }) => {
     );
   }
 
-  if (
-    userData.authToken === undefined
-    || userData.authToken === ''
-    || userData.authToken === null
-  ) {
+  if (!authToken) {
     return (
       <>
         <SignInForm
-          error={userData.signInError}
+          error={signInError}
           userEmail={userEmail}
           userPassWord={userPassWord}
           handleSubmit={handleSubmit}
@@ -50,19 +48,4 @@ const SignInContainer = ({ logInUser, userData }) => {
   return <Redirect to="/activities" />;
 };
 
-SignInContainer.propTypes = {
-  logInUser: PropTypes.func.isRequired,
-  userData: PropTypes.instanceOf(Object).isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  userData: state.userCredentials,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  logInUser: (logInCredentials) => {
-    dispatch(signInUser(logInCredentials));
-  },
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SignInContainer);
+export default SignInContainer;
