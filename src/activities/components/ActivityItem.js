@@ -7,6 +7,17 @@ import './ActivityItem.css';
 const ActivityItem = ({
   id, title, park, imageUrl, details, hasDetails,
 }) => {
+  const hasDetailsStyles = (hasDetails) => {
+    if (hasDetails) {
+      return {
+        border: '0',
+        marginLeft: '1rem',
+        marginRight: '1rem',
+      };
+    }
+    return {};
+  };
+
   const displayDetails = (hasDetails) => {
     if (hasDetails) {
       return (
@@ -29,7 +40,7 @@ const ActivityItem = ({
     );
   };
   return (
-    <Card>
+    <Card style={hasDetailsStyles(hasDetails)}>
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
         <Card.Title className="fw-bolder">{title}</Card.Title>

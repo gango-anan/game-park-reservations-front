@@ -6,12 +6,12 @@ import './Reservation.css';
 const Reservation = ({
   id, title, imageUrl, park, date,
 }) => (
-  <li key={`gsr-${id}`}>
+  <li key={`gsr-${id}`} className="reservation-item">
     <Card>
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{park}</Card.Text>
+        <Card.Title className="fw-bold">{title}</Card.Title>
+        <Card.Text className="text-danger">{park}</Card.Text>
         <Card.Text>{date}</Card.Text>
       </Card.Body>
     </Card>
