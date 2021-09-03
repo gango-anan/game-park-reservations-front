@@ -6,12 +6,16 @@ import ActivityItem from '../components/ActivityItem';
 import './ActivitiesContainer.css';
 
 const ActivitiesContainer = ({ allActivities }) => {
-  const renderActivity = (activity) => (
+  const hasDetails = false;
+  const renderActivity = (activity, hasDetails) => (
     <div key={activity.id}>
       <ActivityItem
+        id={activity.id}
+        hasDetails={hasDetails}
         title={activity.title}
         park={activity.park}
         imageUrl={activity.image_url}
+        details={activity.details}
       />
     </div>
   );
@@ -21,7 +25,7 @@ const ActivitiesContainer = ({ allActivities }) => {
       <div className="activities-grid">
         {allActivities.map((activity) => {
           const { attributes } = activity;
-          return renderActivity(attributes);
+          return renderActivity(attributes, hasDetails);
         })}
       </div>
     </Container>
@@ -33,7 +37,6 @@ ActivitiesContainer.propTypes = {
 
 const mapStateToProps = (state) => ({
   allActivities: state.allActivities.activities,
-  appStore: state,
 });
 
 export default connect(mapStateToProps)(ActivitiesContainer);
