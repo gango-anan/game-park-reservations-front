@@ -6,41 +6,42 @@ import {
 
 const initialState = {
   user: {},
-  username: localStorage.getItem('loggedInUserName'),
-  loggedIn: JSON.parse(localStorage.getItem('loggedInStatus')),
+  username: localStorage.getItem('loggedInUserName') || '',
+  userId: localStorage.getItem('loggedInUserId') || '',
+  loggedIn: JSON.parse(localStorage.getItem('loggedInStatus')) || false,
   signInError: '',
-  authToken: localStorage.getItem('loggedInUserAuthToken'),
-  waitingForData: false,
+  authToken: localStorage.getItem('loggedInUserAuthToken') || '',
+  userDataLoading: false,
 };
 
 const userSignInReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_USER:
-      return { ...state, waitingForData: true };
+      return { ...state, userDataLoading: true };
     case LOGIN_SUCCESSFUL:
+      localStorage.setItem('loggedInUserName', action.payload.user.username);
+      localStorage.setItem('loggedInStatus', JSON.stringify(true));
+      localStorage.setItem('loggedInUserAuthToken', action.payload.user.token);
       return {
         ...state,
-        user: action.payload.user,
-        username: localStorage.setItem(
-          'loggedInUserName',
-          action.payload.user.username,
-        ),
-        loggedIn: localStorage.setItem('loggedInStatus', JSON.stringify(true)),
+        user: { ...action.payload.user },
+        username: action.payload.user.username,
+        loggedIn: true,
         signInError: '',
-        authToken: localStorage.setItem(
-          'loggedInUserAuthToken',
-          action.payload.user.token,
-        ),
-        waitingForData: false,
+        authToken: action.payload.user.token,
+        userDataLoading: false,
       };
     case LOGIN_UNSUCCESSFUL:
+      localStorage.setItem('loggedInStatus', JSON.stringify(false));
+      localStorage.setItem('loggedInUserName', '');
+      localStorage.setItem('loggedInUserAuthToken', '');
       return {
         ...state,
-        loggedIn: localStorage.setItem('loggedInStatus', JSON.stringify(false)),
+        loggedIn: false,
         signInError: action.payload,
-        username: localStorage.setItem('loggedInUserName', ''),
-        authToken: localStorage.setItem('loggedInUserAuthToken', ''),
-        waitingForData: false,
+        username: '',
+        authToken: '',
+        userDataLoading: false,
       };
     default:
       return state;
