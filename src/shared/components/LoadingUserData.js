@@ -1,11 +1,21 @@
 import React from 'react';
 import { IonSpinner } from '@ionic/react';
 
+const SpinnerContainerStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: '30vh',
+};
+
 const LoaderStyles = {
-  margin: 'auto',
-  transform: 'scale(8)',
+  transform: 'scale(5)',
   color: 'var(--primary-color)',
 };
-const LoadingUserData = () => (<IonSpinner name="bubbles" style={LoaderStyles} />);
+const LoadingUserData = () => (
+  <div style={SpinnerContainerStyles}>
+    <IonSpinner name="bubbles" style={LoaderStyles} />
+  </div>
+);
 
 export default LoadingUserData;
