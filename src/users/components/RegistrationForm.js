@@ -9,6 +9,7 @@ const RegistrationForm = ({
   userPassWord,
   userPassWordConfirmation,
   handleSubmit,
+  errors,
 }) => {
   useEffect(() => {
     userName.current.focus();
@@ -17,6 +18,9 @@ const RegistrationForm = ({
   return (
     <section className="auth-form-wrapper">
       <div className="form-container">
+        <div>
+          <p className="text-danger text-center">{errors}</p>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="form-title">
             <h2>Sign up</h2>
@@ -85,6 +89,7 @@ RegistrationForm.propTypes = {
   userPassWord: PropTypes.instanceOf(Object).isRequired,
   userPassWordConfirmation: PropTypes.instanceOf(Object).isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  errors: PropTypes.string.isRequired,
 };
 
 export default RegistrationForm;

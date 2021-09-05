@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Reservation from '../components/Reservation';
-import fetchReservations from '../../actions/reservationsActions';
+import { fetchReservations } from '../../actions/reservationsActions';
+import './UserReservationsList.css';
 
 const UserReservationsList = () => {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const UserReservationsList = () => {
   }
 
   return (
-    <ul>
+    <ul className="reservations-list">
       {userReservations.map((reservation) => {
         const { attributes, id } = reservation;
         return (

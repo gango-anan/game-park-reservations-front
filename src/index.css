@@ -24,7 +24,11 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--grayish-color);
+}
+
+a:hover {
+  color: red;
+  font-weight: bold;
 }
 
 button {

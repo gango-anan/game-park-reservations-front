@@ -11,11 +11,9 @@ const initialState = {
 const activitiesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ACTIVITIES:
+      localStorage.setItem(activitiesKey, JSON.stringify(action.payload));
       return {
-        activities: localStorage.setItem(
-          activitiesKey,
-          JSON.stringify(action.payload),
-        ),
+        activities: action.payload,
       };
     case FETCH_ACTIVITIES_FAILED:
       return { ...state };
