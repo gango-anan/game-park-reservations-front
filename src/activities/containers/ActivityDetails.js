@@ -6,11 +6,13 @@ import ActivityItem from '../components/ActivityItem';
 const ActivityDetails = () => {
   const { activityId } = useParams();
   const activities = useSelector((state) => state.allActivities.activities);
+  const authToken = useSelector((state) => state.userCredentials.authToken);
   const filteredActivity = activities.filter(
     (activity) => activity.id === activityId,
   );
   const activity = filteredActivity[0].attributes;
   const hasDetails = true;
+
   return (
     <ActivityItem
       id={activity.id}
@@ -19,6 +21,7 @@ const ActivityDetails = () => {
       park={activity.park}
       imageUrl={activity.image_url}
       details={activity.details}
+      authToken={authToken}
     />
   );
 };

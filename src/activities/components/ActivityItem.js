@@ -5,8 +5,34 @@ import { Link } from 'react-router-dom';
 import './ActivityItem.css';
 
 const ActivityItem = ({
-  id, title, park, imageUrl, details, hasDetails,
+  id,
+  title,
+  park,
+  imageUrl,
+  details,
+  hasDetails,
+  authToken,
 }) => {
+  const linkToShow = (token) => {
+    if (token) {
+      return (
+        <Link to={`/reservation/activity/${id}/new`}>
+          <Button className="card-btn">Make reservation</Button>
+        </Link>
+      );
+    }
+    return (
+      <p className="font-monospace">
+        <Link to="/signin">Sign in</Link>
+        {' '}
+        or &nbsp;
+        <Link to="/signup">Sign up</Link>
+        {' '}
+        to make this reservation.
+      </p>
+    );
+  };
+
   const hasDetailsStyles = (hasDetails) => {
     if (hasDetails) {
       return {
@@ -24,9 +50,7 @@ const ActivityItem = ({
         <>
           <Card.Text className="font-monospace text-danger">{park}</Card.Text>
           <Card.Text>{details}</Card.Text>
-          <Link to={`/reservation/activity/${id}/new`}>
-            <Button className="card-btn">Make reservation</Button>
-          </Link>
+          {linkToShow(authToken)}
         </>
       );
     }
@@ -57,6 +81,7 @@ ActivityItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   hasDetails: PropTypes.bool.isRequired,
+  authToken: PropTypes.string.isRequired,
 };
 
 export default ActivityItem;
