@@ -36,7 +36,7 @@ const App = () => (
             />
             <Route
               exact
-              path="/:username/reservations"
+              path="/reservations"
               component={UserReservationsList}
             />
             <Route
