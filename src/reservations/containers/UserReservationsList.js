@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Reservation from '../components/Reservation';
-import fetchReservations from '../../actions/reservationsActions';
+import { fetchReservations } from '../../actions/reservationsActions';
 import './UserReservationsList.css';
 
 const UserReservationsList = () => {
