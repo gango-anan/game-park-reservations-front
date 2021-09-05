@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import { Container, Nav } from 'react-bootstrap';
 import logo from '../../../assets/images/logo.jpg';
 import './Navigation.style.css';
+import { logOutUser } from '../../../actions/usersActions';
 
 const NavigationBar = ({ userName }) => {
+  const dispatch = useDispatch();
+  const handleOnClick = () => {
+    dispatch(logOutUser());
+  };
+
   const renderLinks = (username) => {
     if (username) {
       return (
         <>
           <Nav className="align-links">
-            <Nav.Link as={NavLink} to="/" className="nav-links">
+            <Nav.Link
+              as={NavLink}
+              to="/"
+              className="nav-links"
+              onClick={handleOnClick}
+            >
               Log out
             </Nav.Link>
           </Nav>

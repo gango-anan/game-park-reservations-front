@@ -6,6 +6,7 @@ import {
   LOGIN_USER,
   LOGIN_SUCCESSFUL,
   LOGIN_UNSUCCESSFUL,
+  LOGOUT_USER,
 } from '../shared/actionTypes';
 
 export const signUpUser = (userSignUpData) => (dispatch) => {
@@ -44,4 +45,8 @@ export const signInUser = (userSignInData) => (dispatch) => {
         });
       }
     });
+};
+
+export const logOutUser = () => (dispatch) => {
+  dispatch({ type: LOGOUT_USER, payload: {} });
 };
