@@ -4,13 +4,12 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 
-const userName = localStorage.getItem('loggedInUserName') || '';
 export const sideBarData = [
   {
     id: 'gsr-user',
-    title: userName,
+    title: 'username',
     icon: <AccountCircleIcon />,
-    link: `/${userName}/dashboard`,
+    link: '/username/dashboard',
   },
   {
     id: 'gsr-home',
@@ -28,7 +27,7 @@ export const sideBarData = [
     id: 'gsr-reservations',
     title: 'Reservations',
     icon: <EventAvailableIcon />,
-    link: `/${userName}/reservations`,
+    link: '/reservations',
   },
 ];
 
