@@ -10,7 +10,7 @@ const SignInContainer = () => {
   const userPassWord = useRef(null);
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userCredentials);
-  const { authToken, signInError, userDataLoading } = userData;
+  const { authToken, authenticationErrors, userDataLoading } = userData;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,7 +37,7 @@ const SignInContainer = () => {
     return (
       <>
         <SignInForm
-          error={signInError}
+          error={authenticationErrors}
           userEmail={userEmail}
           userPassWord={userPassWord}
           handleSubmit={handleSubmit}
