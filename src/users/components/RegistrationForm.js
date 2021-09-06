@@ -19,12 +19,12 @@ const RegistrationForm = ({
   return (
     <section className="auth-form-wrapper">
       <div className="form-container">
-        <div>
-          <p className="text-danger text-center">{errors}</p>
-        </div>
         <form onSubmit={handleSubmit}>
           <div className="form-title">
             <h2>Sign up</h2>
+          </div>
+          <div>
+            <p className="text-danger text-center">{errors}</p>
           </div>
           <div className="form-controller">
             <label htmlFor="username">Name:</label>

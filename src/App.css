@@ -15,9 +15,26 @@
   .menu-title {
     margin-left: 0;
   }
+
   .nav-menu {
     left: 0;
+    background-color: var(--light-color);
+    border-right: 1px solid var(--grayish-color);
+    z-index: -10;
   }
+
+  .navbar-toggle {
+    background-color: var(--light-color);
+  }
+
+  .nav-text a {
+    color: #000033;
+  }
+
+  .nav-text a.active {
+    color: var(--light-color);
+  }
+
   .banner-bg {
     height: 65vh;
     padding-top: 15vh;
@@ -32,5 +49,16 @@
   .more-activities-images {
     width: 50vw;
     margin: auto;
+  }
+  .form-container {
+    width: 35%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .form-controller {
+    margin: 1rem 0;
+  }
+  .form-controller input {
+    padding: 0.2vw;
   }
 }
