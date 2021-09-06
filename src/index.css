@@ -28,15 +28,14 @@ a {
 
 a:hover {
   color: red;
-  font-weight: bold;
 }
 
 button {
+  padding: 0.5rem 1rem;
+  border: 0;
   background-color: var(--primary-color);
-  border-radius: 5px;
 }
 
 button a {
   color: var(--light-color);
-  font-size: 1.4vw;
 }
