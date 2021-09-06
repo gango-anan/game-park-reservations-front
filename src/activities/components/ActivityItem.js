@@ -74,6 +74,10 @@ const ActivityItem = ({
   );
 };
 
+ActivityItem.defaultProps = {
+  authToken: '',
+};
+
 ActivityItem.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
@@ -81,7 +85,7 @@ ActivityItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   hasDetails: PropTypes.bool.isRequired,
-  authToken: PropTypes.string.isRequired,
+  authToken: PropTypes.string,
 };
 
 export default ActivityItem;
