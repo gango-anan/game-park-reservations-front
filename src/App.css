@@ -6,12 +6,15 @@
   .main-body {
     margin-left: 12rem;
   }
+
   .menu-bars {
     display: none;
   }
+
   .navbar {
     justify-content: center;
   }
+
   .menu-title {
     margin-left: 0;
   }
@@ -28,7 +31,7 @@
   }
 
   .nav-text a {
-    color: #000033;
+    color: #003;
   }
 
   .nav-text a.active {
@@ -39,25 +42,31 @@
     height: 65vh;
     padding-top: 15vh;
   }
+
   .home_title {
     font-size: 3vw;
     border-bottom: 1px solid var(--light-color);
   }
+
   .home_slogan {
     font-size: 1.5vw;
   }
+
   .more-activities-images {
     width: 50vw;
     margin: auto;
   }
+
   .form-container {
     width: 35%;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
   .form-controller {
     margin: 1rem 0;
   }
+
   .form-controller input {
     padding: 0.2vw;
   }

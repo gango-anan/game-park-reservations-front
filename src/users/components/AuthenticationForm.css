@@ -5,7 +5,8 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       to right,
       rgba(39, 39, 39, 0.3),
       rgba(39, 39, 39, 0.3)
