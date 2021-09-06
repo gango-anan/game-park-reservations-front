@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import PropTypes from 'prop-types';
-import './AuthenticationForm.css';
 import { Link } from 'react-router-dom';
+import './AuthenticationForm.css';
 
 const RegistrationForm = ({
   userName,
@@ -74,10 +75,26 @@ const RegistrationForm = ({
               Sign Up
             </button>
           </div>
-          <div className="back-home-link">
-            <Link to="/">Back to home page</Link>
-          </div>
         </form>
+        <div className="signup-link">
+          <p>
+            <span className="unregistered-user-link">
+              Already have an account?
+            </span>
+            &nbsp;
+            <span>
+              <Link to="/signin" className="text-secondary fw-bold">
+                Sign in now
+              </Link>
+            </span>
+          </p>
+        </div>
+        <div className="text-center">
+          <Link to="/" className="text-danger">
+            <KeyboardBackspaceIcon />
+            &nbsp; Back home
+          </Link>
+        </div>
       </div>
     </section>
   );
