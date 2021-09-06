@@ -26,10 +26,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: red;
-}
-
 button {
   padding: 0.5rem 1rem;
   border: 0;
@@ -38,4 +34,8 @@ button {
 
 button a {
   color: var(--light-color);
+}
+
+a:hover {
+  color: red;
 }
