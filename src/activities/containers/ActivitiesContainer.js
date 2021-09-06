@@ -1,11 +1,23 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import ActivityItem from '../components/ActivityItem';
 import './ActivitiesContainer.css';
+import { fetchReservations } from '../../actions/reservationsActions';
 
 const ActivitiesContainer = ({ allActivities }) => {
+  const dispatch = useDispatch();
+  const currenUserReservations = useSelector(
+    (state) => state.userReservations.reservations,
+  );
+  const authToken = useSelector((state) => state.userCredentials.authToken);
+  useEffect(() => {
+    if (authToken && !currenUserReservations.length) {
+      dispatch(fetchReservations(authToken));
+    }
+  }, [authToken]);
+
   const hasDetails = false;
   const renderActivity = (activity, hasDetails) => (
     <div key={activity.id}>
