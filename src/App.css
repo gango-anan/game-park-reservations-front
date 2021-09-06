@@ -1,3 +1,36 @@
 .main-body {
-  padding-left: 160px;
+  margin-top: 90px;
+}
+
+@media (min-width: 769px) {
+  .main-body {
+    margin-left: 12rem;
+  }
+  .menu-bars {
+    display: none;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .menu-title {
+    margin-left: 0;
+  }
+  .nav-menu {
+    left: 0;
+  }
+  .banner-bg {
+    height: 65vh;
+    padding-top: 15vh;
+  }
+  .home_title {
+    font-size: 3vw;
+    border-bottom: 1px solid var(--light-color);
+  }
+  .home_slogan {
+    font-size: 1.5vw;
+  }
+  .more-activities-images {
+    width: 50vw;
+    margin: auto;
+  }
 }
