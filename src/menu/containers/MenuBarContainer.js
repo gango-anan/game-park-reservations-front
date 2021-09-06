@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MenuBar from '../components/MenuBar';
 import { logOutUser } from '../../actions/usersActions';
@@ -9,6 +9,8 @@ const MenuBarContainer = () => {
   const handleOnClick = () => {
     dispatch(logOutUser());
   };
+
+  useEffect(() => {}, [user]);
 
   const { authToken, username } = user;
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -17,10 +17,10 @@ const MenuBar = ({ token, username, handleOnClick }) => {
         <>
           {UNAUTHENTICATED_LINKS.map((item) => (
             <li key={item.id} className={item.cssClassName}>
-              <Link to={item.path}>
+              <NavLink to={item.path}>
                 {item.icon}
                 <span>{item.title}</span>
-              </Link>
+              </NavLink>
             </li>
           ))}
         </>
@@ -30,10 +30,10 @@ const MenuBar = ({ token, username, handleOnClick }) => {
     return (
       <>
         <li className="nav-text">
-          <Link to="/username/dashboard">
+          <NavLink to="/username/dashboard" className="menu-links">
             <AccountCircleIcon />
             <span>{username}</span>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-text">
           <Link to="/" onClick={handleOnClick}>
@@ -43,10 +43,10 @@ const MenuBar = ({ token, username, handleOnClick }) => {
         </li>
         {MenuBarData.map((item) => (
           <li key={item.id} className={item.cssClassName}>
-            <Link to={item.path}>
+            <NavLink to={item.path}>
               {item.icon}
               <span>{item.title}</span>
-            </Link>
+            </NavLink>
           </li>
         ))}
       </>
@@ -56,9 +56,18 @@ const MenuBar = ({ token, username, handleOnClick }) => {
   return (
     <header>
       <div className="navbar">
-        <Link to="/" className="menu-bars">
-          <MenuIcon onClick={showSideBar} />
-        </Link>
+        <button
+          type="button"
+          className="menu-bars"
+          style={{ border: 'none', background: 'none' }}
+        >
+          <MenuIcon
+            onClick={showSideBar}
+            fontSize="large"
+            style={{ color: '#fff' }}
+          />
+        </button>
+        <p className="text-danger menu-title">Game Safaris Reservations</p>
       </div>
       <nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
         <ul
@@ -68,9 +77,13 @@ const MenuBar = ({ token, username, handleOnClick }) => {
           onKeyPress={showSideBar}
         >
           <li className="navbar-toggle">
-            <Link to="/" className="menu-bars">
-              <CloseIcon />
-            </Link>
+            <button
+              type="button"
+              className="menu-bars"
+              style={{ border: 'none', background: 'none' }}
+            >
+              <CloseIcon fontSize="large" style={{ color: '#fff' }} />
+            </button>
           </li>
           {linksToDisplay(token)}
         </ul>
