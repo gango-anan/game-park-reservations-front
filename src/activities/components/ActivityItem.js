@@ -17,7 +17,7 @@ const ActivityItem = ({
     if (token) {
       return (
         <Link to={`/reservation/activity/${id}/new`}>
-          <Button className="card-btn">Make reservation</Button>
+          <Button>Make reservation</Button>
         </Link>
       );
     }
@@ -58,13 +58,13 @@ const ActivityItem = ({
       <>
         <Card.Text className="font-monospace text-danger">{park}</Card.Text>
         <Link to={`/activity/${id}/details`}>
-          <Button className="card-btn">More details</Button>
+          <Button>More details</Button>
         </Link>
       </>
     );
   };
   return (
-    <Card style={hasDetailsStyles(hasDetails)}>
+    <Card className="w-75 mx-auto" style={hasDetailsStyles(hasDetails)}>
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
         <Card.Title className="fw-bolder">{title}</Card.Title>
