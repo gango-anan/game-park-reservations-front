@@ -40,11 +40,3 @@ button a {
   color: var(--light-color);
   font-size: 1.4vw;
 }
-
-header {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background-color: var(--light-color);
-}
