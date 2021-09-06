@@ -17,7 +17,8 @@ const ReservationForm = ({
   }, []);
 
   return (
-    <div>
+    <div className="reservation-form-wrapper">
+      <p className="fs-1 text-center">Reservation Form </p>
       <Container>
         <Form onSubmit={handleSubmit}>
           <div>
