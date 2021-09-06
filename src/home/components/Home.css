@@ -3,13 +3,13 @@
 }
 
 .banner-bg {
-  height: 40vh;
+  height: 25vh;
   overflow: hidden;
   text-align: center;
-  padding-top: 15vh;
+  padding-top: 8vh;
   background: linear-gradient(
       to right,
-      rgba(39, 39, 39, 0.6),
+      rgba(39, 39, 39, 0.5),
       rgba(39, 39, 39, 0.3)
     ),
     url('../../assets/images/cover-pic7.jpg') center top;
@@ -19,7 +19,7 @@
 
 .home_title {
   color: var(--light-color);
-  font-size: 4vw;
+  font-size: 3.5vw;
   padding-bottom: 1rem;
   margin: 0 auto 1rem auto;
   border-bottom: 1.5px solid var(--light-color);
@@ -32,42 +32,34 @@
 }
 
 .home-page-details {
-  margin: 10vh;
+  padding: 1.5rem 1rem;
 }
 
 .activity-details {
-  width: 45vw;
+  width: 65%;
 }
 
 .home-activity-title {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 1.5rem;
 }
 
 .details-container {
-  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   color: var(--grayish-color);
 }
 
 .activity-details-title {
-  font-size: 3vw;
+  font-size: 1.1rem;
 }
 
 .activity-details-body {
-  font-size: 2vw;
-}
-
-.btn-more-details {
-  padding: 0.5em 1rem;
-  border: 0;
-  background-color: var(--primary-color);
-  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 .image-container {
-  width: 20vw;
+  width: 20%;
 }
 
 .featured-image {

@@ -24,11 +24,9 @@ const Home = () => {
         </p>
       </div>
       <div className="home-page-details">
-        <div>
-          <h4 className="home-activity-title">
-            Featured activity of the month...
-          </h4>
-        </div>
+        <h4 className="home-activity-title">
+          Featured activity of the month...
+        </h4>
         <div className="details-container">
           <div className="activity-details">
             <h3 className="activity-details-title">Gorilla Trekking</h3>
@@ -39,36 +37,36 @@ const Home = () => {
               primate experience that any visitor on Uganda safari should not
               miss out.
             </p>
-            <button type="button" className="btn-more-details">
-              <Link to="/signin">More details</Link>
-            </button>
+            <Link to="/activities" className="fst-italic font-monospace">
+              See more details
+            </Link>
           </div>
           <div className="image-container">
             <img src={gorilla} alt="Gorilla" className="featured-image" />
           </div>
         </div>
       </div>
-
-      <Carousel>
-        <h4 className="text-center">More activities</h4>
-        {activities.map((activity) => {
-          const { attributes } = activity;
-          return (
-            <Carousel.Item key={`game-${attributes.id}`}>
-              <img
-                className="d-block w-100"
-                src={attributes.image_url}
-                alt={attributes.title}
-              />
-              <Carousel.Caption>
-                <h3>{attributes.title}</h3>
-                <p>{attributes.park}</p>
-                <Link to="/">More details</Link>
-              </Carousel.Caption>
-            </Carousel.Item>
-          );
-        })}
-      </Carousel>
+      <section className="more-activies-section">
+        <h4 className="text-center mb-3">More activities</h4>
+        <Carousel className="more-activities-images">
+          {activities.map((activity) => {
+            const { attributes } = activity;
+            return (
+              <Carousel.Item key={`game-${attributes.id}`}>
+                <img
+                  className="d-block w-100"
+                  src={attributes.image_url}
+                  alt={attributes.title}
+                />
+                <Carousel.Caption>
+                  <h3>{attributes.title}</h3>
+                  <p>{attributes.park}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>
+      </section>
     </Container>
   );
 };
