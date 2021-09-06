@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import './AuthenticationForm.css';
 
 const SignInForm = ({
@@ -14,64 +17,56 @@ const SignInForm = ({
     <div className="auth-form-wrapper">
       <div className="form-container">
         <div>
-          <p className="text-danger text-center">{error}</p>
-        </div>
-        <form onSubmit={handleSubmit}>
           <div className="form-title">
             <h2>Sign in</h2>
             <p>to continue to Game Safaris Reservations</p>
           </div>
-          <div className="form-controller">
-            <label htmlFor="useremail">Email:</label>
-            <input
-              ref={userEmail}
-              id="useremail"
+          <p className="text-danger text-center">{error}</p>
+        </div>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
               type="email"
-              name="email"
-              placeholder="email@example.com"
+              placeholder="Enter email"
+              ref={userEmail}
               required
             />
-          </div>
-          <div className="form-controller">
-            <label htmlFor="userpassword">Password:</label>
-            <input
-              ref={userPassWord}
-              id="userpassword"
+            <Form.Text className="text-muted">
+              We&apos;ll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
               type="password"
-              name="password"
-              placeholder="Passowrd"
+              placeholder="Password"
+              ref={userPassWord}
               required
             />
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              name="showPassword"
-              id="show-password"
-              className="show-password-checkbox"
-            />
-            <label htmlFor="show-password">Show passord</label>
-          </div>
-          <div>
-            <button type="submit" className="auth-form-btn">
-              Sign in
-            </button>
-          </div>
-          <div className="signup-link">
-            <p>
-              <span className="unregistered-user-link">
-                New to Game Safaris?
-              </span>
-              {' '}
-              <span>
-                <Link to="/signup">Sign up now</Link>
-              </span>
-            </p>
-          </div>
-          <div className="back-home-link">
-            <Link to="/">Back to home page</Link>
-          </div>
-        </form>
+          </Form.Group>
+          <Button variant="primary" type="submit" className="auth-form-btn">
+            Sign in
+          </Button>
+        </Form>
+        <div className="signup-link">
+          <p>
+            <span className="unregistered-user-link">New to Game Safaris?</span>
+            &nbsp;
+            <span>
+              <Link to="/signup" className="text-secondary fw-bold">
+                Sign up now
+              </Link>
+            </span>
+          </p>
+        </div>
+        <div className="text-center">
+          <Link to="/" className="text-danger">
+            <KeyboardBackspaceIcon />
+            &nbsp; Back home
+          </Link>
+        </div>
       </div>
     </div>
   );
