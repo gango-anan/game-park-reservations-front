@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, Redirect, Link } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import ReservationForm from '../components/ReservationForm';
 import { makeReservation } from '../../actions/reservationsActions';
+import SharedCard from '../../shared/components/SharedCard';
 
 const NewReservation = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,12 @@ const NewReservation = () => {
   } = user;
   const { title, park } = currentActivity;
 
+  const alertInfo = {
+    title: 'Activity already in your reservations list!',
+    details:
+      'You already made a reservation with this actvity. Please click the button below to see more activities, and make a reservation.',
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = {
@@ -41,13 +48,10 @@ const NewReservation = () => {
   };
 
   if (alreadyReservedActivity && !reservationsDataLoading) {
+    const { title, details } = alertInfo;
     return (
       <div>
-        <p>
-          You already made a reservation with this activity, please try another
-          one!
-        </p>
-        <Link to="/activities">try again</Link>
+        <SharedCard title={title} details={details} />
       </div>
     );
   }

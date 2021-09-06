@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Reservation from '../components/Reservation';
 import { fetchReservations } from '../../actions/reservationsActions';
 import './UserReservationsList.css';
+import SharedCard from '../../shared/components/SharedCard';
 
 const UserReservationsList = () => {
   const dispatch = useDispatch();
@@ -17,11 +17,17 @@ const UserReservationsList = () => {
     }
   }, [dispatch]);
 
+  const alertInfo = {
+    title: 'No reservations!',
+    details:
+      'You have no reservations yet, click the button below to browse through a list our famous activities and make a reservation. ',
+  };
+
   if (userReservations.length === 0) {
+    const { title, details } = alertInfo;
     return (
       <div>
-        <h2>No reservations found. Make a reservation</h2>
-        <Link to="/new_reservation">Make a reservation</Link>
+        <SharedCard title={title} details={details} />
       </div>
     );
   }
