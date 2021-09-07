@@ -6,8 +6,6 @@ import {
 
 const fetchActivities = () => (dispatch) => {
   axios
-
-    // .get('http://localhost:3000/api/v1/activities')
     .get(
       'https://galisoft-gamesafaris-back-end.herokuapp.com/api/v1/activities',
     )
