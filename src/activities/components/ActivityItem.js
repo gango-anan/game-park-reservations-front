@@ -63,7 +63,11 @@ const ActivityItem = ({
     );
   };
   return (
-    <Card className="w-75 mx-auto" style={hasDetailsStyles(hasDetails)}>
+    <Card
+      className="w-75 mx-auto"
+      style={hasDetailsStyles(hasDetails)}
+      data-testid="activity-test"
+    >
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
         <Card.Title className="fw-bolder">{title}</Card.Title>
