@@ -36,7 +36,7 @@ beforeEach(() => {
         hasDetails={data.hasDetails}
         authToken={data.authToken}
       />
-    </BrowserRouter>
+    </BrowserRouter>,
   );
 });
 
@@ -63,7 +63,7 @@ test('matches snapshot', () => {
           hasDetails={data2.hasDetails}
           authToken={data2.authToken}
         />
-      </BrowserRouter>
+      </BrowserRouter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

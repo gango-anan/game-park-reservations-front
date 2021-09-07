@@ -16,7 +16,7 @@ const Home = () => {
     );
   }
   return (
-    <Container fluid className="title_container">
+    <Container fluid className="title_container" data-testid="home-test">
       <div className="banner-bg">
         <h2 className="home_title">Game Safaris Reservations</h2>
         <p className="home_slogan">
