@@ -11,9 +11,12 @@ import {
 export const fetchReservations = (authToken) => (dispatch) => {
   dispatch({ type: FETCH_RESERVATIONS, payload: {} });
   axios
-    .get('http://localhost:3000/api/v1/reservations', {
-      headers: { Authorization: `${authToken}` },
-    })
+    .get(
+      'https://galisoft-gamesafaris-back-end.herokuapp.com/api/v1/reservations',
+      {
+        headers: { Authorization: `${authToken}` },
+      },
+    )
     .then((response) => {
       dispatch({
         type: FETCH_RESERVATIONS_SUCCESSFUL,
@@ -31,9 +34,13 @@ export const fetchReservations = (authToken) => (dispatch) => {
 export const makeReservation = (authToken, data) => (dispatch) => {
   dispatch({ type: MAKE_RESERVATION, payload: {} });
   axios
-    .post('http://localhost:3000/api/v1/reservations', data, {
-      headers: { Authorization: `${authToken}` },
-    })
+    .post(
+      'https://galisoft-gamesafaris-back-end.herokuapp.com/api/v1/reservations',
+      data,
+      {
+        headers: { Authorization: `${authToken}` },
+      },
+    )
     .then((response) => {
       dispatch({
         type: MAKE_RESERVATION_SUCCESSFUL,

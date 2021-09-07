@@ -12,7 +12,10 @@ import {
 export const signUpUser = (userSignUpData) => (dispatch) => {
   dispatch({ type: SIGNUP_USER, payload: {} });
   axios
-    .post('http://localhost:3000/api/v1/register', userSignUpData)
+    .post(
+      'https://galisoft-gamesafaris-back-end.herokuapp.com/api/v1/register',
+      userSignUpData,
+    )
     .then((response) => {
       dispatch({
         type: SIGNUP_SUCCESSFUL,
@@ -30,7 +33,10 @@ export const signUpUser = (userSignUpData) => (dispatch) => {
 export const signInUser = (userSignInData) => (dispatch) => {
   dispatch({ type: LOGIN_USER, payload: {} });
   axios
-    .post('http://localhost:3000/api/v1/sign_in', userSignInData)
+    .post(
+      'https://galisoft-gamesafaris-back-end.herokuapp.com/api/v1/sign_in',
+      userSignInData,
+    )
     .then((response) => {
       dispatch({
         type: LOGIN_SUCCESSFUL,
