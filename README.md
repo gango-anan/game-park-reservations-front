@@ -14,6 +14,24 @@ Game Safaris Reservations is a mobile(tablet version), single page application b
 - Redux
 - game-park-reservations-api
 
+## Screen shots
+
+### Home page
+
+![screenshot](./hope-page.png)
+
+### Sign in page
+
+![screenshot](./login-page.png)
+
+### Activities page
+
+![screenshot](./activities.png)
+
+### Activity details page
+
+![screenshot](./details-page.png)
+
 ## Live Demo
 
 [Live Demo Link](https://galisoft-gamesafaris.netlify.app)
