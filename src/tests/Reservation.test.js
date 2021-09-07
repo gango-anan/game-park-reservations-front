@@ -22,7 +22,7 @@ beforeEach(() => {
         imageUrl={data.imageUrl}
         date={data.date}
       />
-    </BrowserRouter>
+    </BrowserRouter>,
   );
 });
 
@@ -47,7 +47,7 @@ test('matches snapshot', () => {
           imageUrl={data.imageUrl}
           date={data.date}
         />
-      </BrowserRouter>
+      </BrowserRouter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
