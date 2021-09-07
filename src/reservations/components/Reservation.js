@@ -7,7 +7,7 @@ const Reservation = ({
   id, title, imageUrl, park, date,
 }) => (
   <li key={`gsr-${id}`} className="reservation-item">
-    <Card>
+    <Card data-testid="reservation-test">
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
         <Card.Title className="fw-bold">{title}</Card.Title>

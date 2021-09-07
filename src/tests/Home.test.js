@@ -12,7 +12,7 @@ beforeEach(() => {
       <BrowserRouter>
         <Home />
       </BrowserRouter>
-    </Provider>
+    </Provider>,
   );
 });
 
@@ -33,7 +33,7 @@ test('matches snapshot', () => {
         <BrowserRouter>
           <Home />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
