@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# GAME SAFARIS RESERVATIONS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Game Safaris Reservations is a mobile(tablet version), single page application built with React, Redux, and consuming data from [Game Safaris Reservation API](https://galisoft-gamesafaris-back-end.herokuapp.com) built using Ruby on Rails. The application uses Redux store, a popular state management library, to manage the data used by the application. The application allows the site visitor to browse through a list of available Game Safaris activities, create an account and make a reservation.
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- HTML
+- CSS
+- Webpack
+- npm
+- React.js
+- Redux
+- game-park-reservations-api
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screen shots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Home page
 
-### `npm test`
+![screenshot](./hope-page.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Sign in page
 
-### `npm run build`
+![screenshot](./login-page.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Activities page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![screenshot](./activities.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Activity details page
 
-### `npm run eject`
+![screenshot](./details-page.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Live Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Live Demo Link](https://galisoft-gamesafaris.netlify.app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## prerequisite
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You must have a live internet connection before you get started.
 
-## Learn More
+## Getting started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To get started:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Clone the repo:
 
-### Code Splitting
+```
+$ git clone https://github.com/gango-anan/game-park-reservations-front.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Setup and run the application
 
-### Analyzing the Bundle Size
+### Install node.js:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+First install node.js
+```
 
-### Making a Progressive Web App
+### Next, navigate to the project folder and install other dependencies using the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+$ npm install
+```
 
-### Advanced Configuration
+### Run the test suite to verify that everything is working correctly:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+$ npm test
+```
 
-### Deployment
+### If the test suite passes, launch the web server using the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+$ npm start
+```
 
-### `npm run build` fails to minify
+### Finally you can launch the application in your browser URL tab, by typing:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+localhost:3001
+```
+
+## Author
+
+Galiwango Ananiya
+
+- GitHub: [@gango-anan](https://github.com/gango-anan)
+- Twitter: [@gango_anan](https://twitter.com/gango_anan)
+- LinkedIn: [@galiwango-ananiya](https://www.linkedin.com/in/galiwango-ananiya/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/gango-anan/game-park-reservations-front/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse Inc](https://www.microverse.org/)
+- Original design idea by [ Murat Korkmaz on Behance](https://www.behance.net/muratk)
+
+## 📝 License
+
+This project is [MIT](https://github.com/gango-anan/game-park-reservations-front/blob/front-end-features/LICENSE) licensed.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/35abb91c-ebb3-49e9-a36f-af3d2e313897/deploy-status)](https://app.netlify.com/sites/galisoft-gamesafaris/deploys)

@@ -1,0 +1,68 @@
+.title-container {
+  width: 80%;
+}
+
+.banner-bg {
+  height: 25vh;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 8vh;
+  background:
+    linear-gradient(
+      to right,
+      rgba(39, 39, 39, 0.5),
+      rgba(39, 39, 39, 0.3)
+    ),
+    url('../../assets/images/cover-pic7.jpg') center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_title {
+  color: var(--light-color);
+  font-size: 3.5vw;
+  padding-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  border-bottom: 1.5px solid var(--light-color);
+  width: 90%;
+}
+
+.home_slogan {
+  color: var(--light-color);
+  font-size: 2vw;
+}
+
+.home-page-details {
+  padding: 1.5rem 1rem;
+}
+
+.activity-details {
+  width: 65%;
+}
+
+.home-activity-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  color: var(--grayish-color);
+}
+
+.activity-details-title {
+  font-size: 1.1rem;
+}
+
+.activity-details-body {
+  font-size: 0.9rem;
+}
+
+.image-container {
+  width: 20%;
+}
+
+.featured-image {
+  border-radius: 50%;
+}
