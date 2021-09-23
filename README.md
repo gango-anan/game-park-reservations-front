@@ -2,7 +2,7 @@
 
 ## About
 
-Game Safaris Reservations is a mobile(tablet version), single page application built with React, Redux, and consuming data from [Game Safaris Reservation API](https://galisoft-gamesafaris-back-end.herokuapp.com) built using Ruby on Rails. The application uses Redux store, a popular state management library, to manage the data used by the application. The application allows the site visitor to browse through a list of available Game Safaris activities, create an account and make a reservation.
+Game Safaris Reservations is a mobile(tablet version), single page application built with React, Redux, and consuming data from [Game Safaris Reservation API](https://github.com/gango-anan/game-park-reservations-api) built using Ruby on Rails. The application uses Redux store, a popular state management library, to manage the data used by the application. The application also allows the site visitor to browse through a list of available Game Safaris activities, create an account and make a reservation.
 
 ## Built With
 
